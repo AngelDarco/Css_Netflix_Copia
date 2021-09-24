@@ -4,82 +4,113 @@
     box-sizing: border-box;
 }
 
-body{
-    background:black;
-}
-
-header{
-    width: 100%;
-    height: 680px;
-    background: linear-gradient(rgba(0, 0, 0, 0.700),rgba(0, 0, 0, 0.700)),url(img/portada.jpg);
-    background-size: cover;
-    position: relative;
-    border-bottom: 10px solid rgb(59, 56, 56);
-}
-
-
 .portada{
-    position:absolute;
-    width:100%;
-    height:50%;
-    color:#fff;
-    text-align: center;
+    display:flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.700),rgba(0, 0, 0, 0.700)),url(img/portada.jpg);
+    border-bottom: 10px solid rgb(59, 56, 56); 
+}
+
+
+ .header{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px; 
+
+}
+
+.imagen__header{
+    width: 10%;
+}
+
+.botones__header{
+    width: 25%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.botones__header select{
+    width: 30%;
+    height: 80%;
+    margin-left: 35px;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: inherit;
+    padding: 0 5px;
+}
+
+.botones__header button{
+    width: 30%;
+    height: 80%;
+    margin-right: 35px;
+    background-color: #e50914;
+    color: #fff;
+    font-size: large;
+    border-radius: 5px;
+    border-style: none;
+}
+
+
+        /* Cuerpo */
+.cuerpo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: #fff;
 }
 
  .titulo{
-     margin-top:17%;
-    font-size: 48px;
+    width: 100%;
+    height: auto;
+    padding-top: 5%;
+    text-align: center;
+    font-size: 50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
 }
 
  .subtitulo{
-     margin-top: 1%;
-    font-size: 20px;
-       
+    font-size: 19px;
+    padding: 2% 0;
 }
 
 .subtitulo2{
-    margin-top: 1.5%;
-    margin-bottom:1%;
-
+    font-size: 17px;
+    padding:  0 0 2% 0;
 }
 
-
-.portada .cuadro-texto .ingresar-email{
-    width: 35%;
-    height: 65px;
-    margin-left: -205px;
-    
-
-}
-
-.portada .cuadro-boton .validar-email{
-    position: absolute;
-    width: 20%;
-    height: 65px;
-    background-color: red;
-    font-size: 28px;
-    font-weight: bold;
-    color: white;
-    margin-top: -4.83%;
-    margin-left:132px;
-    border:0px;
-}
-
-.portada .botones{
-    width: 100%;
-    height: 80px;
-    margin-top:10px;
-}
-
-.portada .botones .netflix{
-    width: 170px;
+.email{
+    width: 50%;
     height: 60px;
-    margin-right: 890px;
+    display: flex;
+    flex-flow: row nowrap;
 }
 
-.portada .botones .iniciar-sesion{
-    width: 140px;
-    height: 30px;
+.email input{
+    width: 70%;
+    font-size: 19px;
+    padding-left: 15px;
+    border-style: none;
+    outline: none;
+}
+
+.email input:active{
+    border: 1px solid blue;
+}
+
+.email button{
+    width: 30%;
+    background-color: #e50914;
+    font-size: 25px;
+    color: #fff;
+    border-style: none;
 }
