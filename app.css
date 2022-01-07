@@ -1,3 +1,7 @@
+:root{
+    --color-primary: linear-gradient(rgba(0, 0, 0, 0.700),rgba(0, 0, 0, 0.700));
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -9,11 +13,9 @@
     flex-flow: column;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.700),rgba(0, 0, 0, 0.700)),url(img/portada.jpg);
+    background: var(--color-primary),url(img/portada.jpg);
     border-bottom: 10px solid rgb(59, 56, 56); 
 }
-
-
  .header{
     width: 100%;
     height: 90px;
@@ -21,9 +23,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 50px; 
-
 }
-
 .imagen__header{
     width: 10%;
 }
@@ -34,9 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
-
 .botones__header select{
     width: 30%;
     height: 80%;
@@ -46,7 +44,6 @@
     background-color: inherit;
     padding: 0 5px;
 }
-
 .botones__header button{
     width: 30%;
     height: 80%;
@@ -58,7 +55,6 @@
     border-style: none;
 }
 
-
         /* Cuerpo */
 .cuerpo{
     width: 100%;
@@ -68,7 +64,6 @@
     align-items: center;
     color: #fff;
 }
-
  .titulo{
     width: 100%;
     height: auto;
@@ -113,4 +108,46 @@
     font-size: 25px;
     color: #fff;
     border-style: none;
+}
+
+/* Section Enjoy on your Tv */
+.enjoy{
+    width: 100%;
+    height: 70vh;
+    display: flex; 
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.enjoy .enjoy__text{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+}
+.enjoy .enjoy__text h1{
+    font-size: 2.5rem;
+    font-weight: bold;  
+    line-height: 1.1;
+    margin-bottom: .5rem;  
+    text-align: center;
+}
+.enjoy .enjoy__text h2{
+    padding: 4% 20%;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+.enjoy .enjoy__animation{
+    width: 40%;
+    height: 100%;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url(./img/tv.png);
+    background-position: center;
 }
