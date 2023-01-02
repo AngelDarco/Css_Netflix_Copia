@@ -1,0 +1,185 @@
+:root {
+    --color-primary: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.portada {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-primary), url(img/portada.jpg);
+    border-bottom: 10px solid rgb(59, 56, 56);
+}
+.header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+.imagen__header {
+    width: 10%;
+}
+
+.botones__header {
+    width: 20%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.botones__header select i{
+    font-size: 1rem;
+    color: #fff;
+}
+.botones__header select {
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0 5px;
+    background-color: inherit;
+}
+.botones__header .lenguages {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+.botones__header .lenguages i {
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: .8rem;
+}
+
+
+.botones__header .lenguages option {
+    background-color: #444;
+}
+
+.botones__header button {
+    width: 30%;
+    height: 80%;
+    background-color: #e50914;
+    color: #fff;
+    font-size: large;
+    border-radius: 5px;
+    border-style: none;
+}
+
+/* Cuerpo */
+.cuerpo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: #fff;
+}
+.titulo {
+    width: 100%;
+    height: auto;
+    padding-top: 5%;
+    text-align: center;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.subtitulo {
+    font-size: 19px;
+    padding: 2% 0;
+}
+
+.subtitulo2 {
+    font-size: 17px;
+    padding: 0 0 2% 0;
+}
+
+.email {
+    width: 50%;
+    height: 60px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.email input {
+    width: 70%;
+    font-size: 19px;
+    padding-left: 15px;
+    border-style: none;
+    outline: none;
+}
+
+.email input:active {
+    border: 1px solid blue;
+}
+
+.email button {
+    width: 30%;
+    background-color: #e50914;
+    font-size: 25px;
+    color: #fff;
+    border-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.email button svg {
+    width: 20%;
+    height: 35%;
+    fill: #fff;
+}
+
+/* Section Enjoy on your Tv */
+.enjoy {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.enjoy .enjoy__text {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+}
+.enjoy .enjoy__text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.enjoy .enjoy__text h2 {
+    padding: 4% 20%;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+.enjoy .enjoy__animation {
+    width: 40%;
+    height: 100%;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url(./img/tv.png);
+    background-position: center;
+}
