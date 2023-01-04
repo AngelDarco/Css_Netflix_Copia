@@ -14,7 +14,6 @@
     width: 100%;
     height: 100vh;
     background: var(--color-primary), url(img/portada.jpg);
-    border-bottom: 10px solid rgb(59, 56, 56);
 }
 .header {
     width: 100%;
@@ -142,27 +141,37 @@
     fill: #fff;
 }
 
+
+
+
 /* Section Enjoy on your Tv */
-.enjoy {
+/* container */
+.enjoy, .download, .watch, .kids, .questions, footer{
+    background-color: #000;
+    color: #fff;
     width: 100%;
     height: 70vh;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
+    border-top: 10px solid rgb(59, 56, 56);
+    border-bottom: 10px solid rgb(59, 56, 56);
+    position: relative;
+    z-index: -200;
 }
+/* title and subtitle */
 .enjoy .enjoy__text {
-    width: 60%;
+    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     flex-flow: column;
     justify-content: center;
-    background-color: #000;
     color: #fff;
 }
 .enjoy .enjoy__text h1 {
-    font-size: 2.5rem;
+    font-size: 3.1rem;
     font-weight: bold;
     line-height: 1.1;
     margin-bottom: 0.5rem;
@@ -170,16 +179,287 @@
 }
 .enjoy .enjoy__text h2 {
     padding: 4% 20%;
-    font-size: 1.25rem;
+    font-size: 1.65rem;
     font-weight: 400;
 }
+/* tv animation */
 .enjoy .enjoy__animation {
+    position: relative;
     width: 40%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.enjoy .enjoy__animation img{
+    width: 100%;
     height: 100%;
-    background-color: inherit;
+    position: relative;
+}
+.enjoy .enjoy__animation .video{    
+    height: 100%;
+    max-height: 65%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-53%);
+    width: 100%;
+    z-index: -100;
+}
+
+.enjoy .enjoy__animation .video video{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Download Section */
+.download{
+    border-top: 0;
+}
+
+.download .animation,.text{
+    width: 50%;
+    height: 80%;
+}
+/* .download .animation{
+    
+} */
+.download .animation .img{
+    width: 100%;
+    height: 100%;
+}
+.download .animation .img img{
+    width: 100%;
+    height: 100%;
+}
+
+.download .text{
+        text-align: center;
+}
+.download .text h1{
+    font-size: 3.1rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+.download .text h2{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+/* Section Watch */
+.watch{
+    border-top: 0;
+    height: 80vh;
+}
+
+.watch .text,.animation{
+    width: 50%;
+    height: 80%;
+}
+.watch .text{
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.watch .text h1{
+    font-size: 3.1rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    /* border: 1px solid red; */
+}
+.watch .text h2{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+
+.watch .animation .img{
+    width: 80%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-image: url(./img/tv.png);
-    background-position: center;
+    position: relative;
+}
+
+.watch .animation .img img{
+    width: 100%;
+    height: 100%;
+}
+.watch .animation .img .video{
+    position: absolute;
+    width: 60%;
+    height: 55%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -100;
+}
+.watch .animation .img .video video{
+    width: 100%;
+    height: 100%;
+}
+
+/* Kids Section */
+.kids{
+    height: 80vh;
+    border-top: 0;
+}
+
+
+
+.kids .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+.kids .text h1{
+    font-size: 3.1rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+.kids .text h2{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+/* Section Questions */
+.questions{
+    height: fit-content;
+    border-top: 0;
+}
+.questions .container{
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.questions .container .closed{
+    display: none;
+}
+
+.questions .container ul{
+    width: 75%;
+    height: 100%;
+    margin: 2em auto;
+}
+.questions .container ul li{
+    background-color: #303030;
+    margin-bottom: .5rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    width: 100%;
+    height: 4.5rem;
+
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* icon */
+.questions .container ul li button{
+    background-color: inherit;
+    border: none;
+    color: #fff;
+    font-size: 26px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+/* svg icon */
+.questions .container ul li button svg{
+    width: 40px;
+    height: 40px;
+    fill: #fff;
+}
+
+.questions .container h1{
+    font-size: 3.1rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.questions .container h3{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+
+/* Footer */
+footer{
+    border-top: 0;
+    height: fit-content;
+}
+
+footer .container {
+    width: 80%;
+    height: 100%;
+    color: #737373;
+    font-size: 1em;
+    padding: 70px 45px;
+}
+footer .container .question-call, .question-call a{
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: inherit;
+}
+
+footer .container ul{
+       box-sizing: border-box;
+    font-size: 13px;
+    max-width: 1000px;
+
+}
+footer .container ul li, li a{
+    list-style-type: none;
+    text-decoration: none;
+    color: inherit;
+    font-size: 13px;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .container ul li{
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 16px;
+    min-width: 100px;
+    padding: 0 12px 0 0;
+    vertical-align: top;
+    width: 20%;
+}
+
+footer .container .lang-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 20%;
+
+}
+
+footer .container .lang-container select{
+    margin: 10px 0;
+    width: 25%;
+    height: 2.5rem;
+    background-color: inherit;
+    color: #fff;
 }
