@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix Perú: Ve series online</title>
     <link rel="icon" href="./img/nficon2016.ico">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js"></script>
 </head>
 
 <link rel="stylesheet" href="./fontawesome-free-6.2.0-web/css/all.min.css">
@@ -48,9 +49,12 @@
             </div>
 
             <div class="email">
-                <input type="text" name="email" placeholder="Email address">
-                <button>Get Started
-                    <svg viewBox="0 0 6 12" xmlns="http://www.w3.org/2000/svg"><desc>chevron</desc><path d="M.61 1.312l.78-.624L5.64 6l-4.25 5.312-.78-.624L4.36 6z" fill="stroke" fill-rule="evenodd"></path></svg>
+                <input type="text" name="email"> <button>Get Started
+                <svg viewBox="0 0 6 12" xmlns="http://www.w3.org/2000/svg">
+                    <desc>chevron</desc>
+                    <path d="M.61 1.312l.78-.624L5.64 6l-4.25 5.312-.78-.624L4.36 6z" fill="stroke" fill-rule="evenodd">
+                    </path>
+                </svg>
                 </button>
             </div>
         </div>
@@ -64,11 +68,215 @@
             </h2>
         </div>
         <div class="enjoy__animation">
-            <video width="80%" height="60%" autoplay="true" loop="true">
-                <source src="./img/tv.m4v" type="video/mp4">
-            </video>
+            <img src="./img/tv.png" alt="tv_img">
+            <div class="video">
+                <video autoplay="true" loop="true">
+                    <source src="./img/tv.m4v" type="video/mp4">
+                </video>
+            </div>
         </div>
     </section>
+
+    <section class="download">
+        <div class="animation">
+            <div class="img">
+                <img src="./img/watch2.jpg" alt="watch__img">
+                <div class="video">
+
+                </div>
+            </div>
+        </div>
+        <div class="text">
+            <h1>Download your shows to watch offline.</h1>
+            <h2>Save your favorites easily and always have something to watch.</h2>
+        </div>
+    </section>
+
+    <section class="watch">
+        <div class="text">
+            <h1>Watch everywhere.</h1>
+            <h2>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</h2>
+        </div>
+        <div class="animation">
+            <div class="img">
+                <img src="./img/tv2.png" alt="">
+                <div class="video">
+                    <video autoplay loop>
+                        <source src="./img/tv2.m4v" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="kids">
+        <div class="animation">
+            <div class="img">
+                <img src="./img/kids.png" alt="Kids__img">
+            </div>
+        </div>
+        <div class="text">
+            <h1>Create profiles for kids.</h1>
+            <h2>Send kids on adventures with their favorite characters in a space made just for them—free with your
+                membership.</h2>
+        </div>
+    </section>
+
+    <section class="questions">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+
+            <ul class="faq-list">
+                <li class="faq-list-item" data-uia-nmhp="faq-list-item" data-uia-faq="what_is_netflix"><button
+                        class="faq-question">What is Netflix?<svg id="thin-x" viewBox="0 0 26 26"
+                            class="svg-icon svg-icon-thin-x svg-closed" focusable="true">
+                            <path
+                                d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z">
+                            </path>
+                        </svg></button>
+                    <div class="faq-answer closed"><span id="" data-uia="">Netflix is a streaming service that offers a
+                            wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands
+                            of internet-connected devices.<br><br>You can watch as much as you want, whenever you want
+                            without a single commercial – all for one low monthly price. There's always something new to
+                            discover and new TV shows and movies are added every week!</span></div>
+                </li>
+                <li class="faq-list-item" data-uia-nmhp="faq-list-item" data-uia-faq="what_is_netflix"><button
+                        class="faq-question">What is Netflix?<svg id="thin-x" viewBox="0 0 26 26"
+                            class="svg-icon svg-icon-thin-x svg-closed" focusable="true">
+                            <path
+                                d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z">
+                            </path>
+                        </svg></button>
+                    <div class="faq-answer closed"><span id="" data-uia="">Netflix is a streaming service that offers a
+                            wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands
+                            of internet-connected devices.<br><br>You can watch as much as you want, whenever you want
+                            without a single commercial – all for one low monthly price. There's always something new to
+                            discover and new TV shows and movies are added every week!</span></div>
+                </li>
+                <li class="faq-list-item" data-uia-nmhp="faq-list-item" data-uia-faq="what_is_netflix"><button
+                        class="faq-question">What is Netflix?<svg id="thin-x" viewBox="0 0 26 26"
+                            class="svg-icon svg-icon-thin-x svg-closed" focusable="true">
+                            <path
+                                d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z">
+                            </path>
+                        </svg></button>
+                    <div class="faq-answer closed"><span id="" data-uia="">Netflix is a streaming service that offers a
+                            wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands
+                            of internet-connected devices.<br><br>You can watch as much as you want, whenever you want
+                            without a single commercial – all for one low monthly price. There's always something new to
+                            discover and new TV shows and movies are added every week!</span></div>
+                </li>
+                <li class="faq-list-item" data-uia-nmhp="faq-list-item" data-uia-faq="cost"><button
+                        class="faq-question">How much does Netflix cost?<svg id="thin-x" viewBox="0 0 26 26"
+                            class="svg-icon svg-icon-thin-x svg-closed" focusable="true">
+                            <path
+                                d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z">
+                            </path>
+                        </svg></button>
+                    <div class="faq-answer closed"><span id="" data-uia="">Watch Netflix on your smartphone, tablet,
+                            Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from
+                            PEN24.90 to PEN44.90 a month. No extra costs, no contracts.</span></div>
+                </li>
+                <li class="faq-list-item" data-uia-nmhp="faq-list-item" data-uia-faq="where_to_watch"><button
+                        class="faq-question">Where can I watch?<svg id="thin-x" viewBox="0 0 26 26"
+                            class="svg-icon svg-icon-thin-x svg-closed" focusable="true">
+                            <path
+                                d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z">
+                            </path>
+                        </svg></button>
+                    <div class="faq-answer closed"><span id="" data-uia="">Watch anywhere, anytime. Sign in with your
+                            Netflix account to watch instantly on the web at netflix.com from your personal computer or
+                            on any internet-connected device that offers the Netflix app, including smart TVs,
+                            smartphones, tablets, streaming media players and game consoles.<br><br>You can also
+                            download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to
+                            watch while you're on the go and without an internet connection. Take Netflix with you
+                            anywhere.</span></div>
+                </li>
+                <li class="faq-list-item" data-uia-nmhp="faq-list-item" data-uia-faq="cancel"><button
+                        class="faq-question">How do I cancel?<svg id="thin-x" viewBox="0 0 26 26"
+                            class="svg-icon svg-icon-thin-x svg-closed" focusable="true">
+                            <path
+                                d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z">
+                            </path>
+                        </svg></button>
+                    <div class="faq-answer closed"><span id="" data-uia="">Netflix is flexible. There are no pesky
+                            contracts and no commitments. You can easily cancel your account online in two clicks. There
+                            are no cancellation fees – start or stop your account anytime.</span></div>
+                </li>
+                <li class="faq-list-item" data-uia-nmhp="faq-list-item" data-uia-faq="what_to_watch_nft"><button
+                        class="faq-question">What can I watch on Netflix?<svg id="thin-x" viewBox="0 0 26 26"
+                            class="svg-icon svg-icon-thin-x svg-closed" focusable="true">
+                            <path
+                                d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z">
+                            </path>
+                        </svg></button>
+                    <div class="faq-answer closed"><span id="" data-uia="">Netflix has an extensive library of feature
+                            films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as
+                            much as you want, anytime you want.</span></div>
+                </li>
+                <li class="faq-list-item" data-uia-nmhp="faq-list-item" data-uia-faq="kids_value_prop"><button
+                        class="faq-question">Is Netflix good for kids?<svg id="thin-x" viewBox="0 0 26 26"
+                            class="svg-icon svg-icon-thin-x svg-closed" focusable="true">
+                            <path
+                                d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z">
+                            </path>
+                        </svg></button>
+                    <div class="faq-answer closed"><span id="" data-uia="">The Netflix Kids experience is included in
+                            your membership to give parents control while kids enjoy family-friendly TV shows and movies
+                            in their own space.<br><br>Kids profiles come with PIN-protected parental controls that let
+                            you restrict the maturity rating of content kids can watch and block specific titles you
+                            don’t want kids to see.</span></div>
+                </li>
+            </ul>
+            <h3 class="email-form-title">Ready to watch? Enter your email to create or restart your membership.</h3>
+
+            <div class="email">
+                <input type="text" name="email"> <button>Get Started
+                    <svg viewBox="0 0 6 12" xmlns="http://www.w3.org/2000/svg">
+                        <desc>chevron</desc>
+                        <path d="M.61 1.312l.78-.624L5.64 6l-4.25 5.312-.78-.624L4.36 6z" fill="stroke"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="question-call">Questions? Call <a href="tel:0-800-52351">0-800-52351</a></p>
+            <ul>
+                <li><a href="https://help.netflix.com/support/412"><span id="">FAQ</span></a></li>
+                <li><a href="https://help.netflix.com"><span id="">Help Center</span></a></li>
+                <li><a href="/youraccount"><span id="">Account</span></a></li>
+                <li><a href="https://media.netflix.com/"><span id="">Media Center</span></a></li>
+                <li><a href="http://ir.netflix.com/"><span id="">Investor Relations</span></a></li>
+                <li><a href="https://jobs.netflix.com/jobs"><span id="">Jobs</span></a></li>
+                <li><a href="/redeem"><span id="">Redeem Gift Cards</span></a></li>
+                <li><a href="/gift-cards"><span id="">Buy Gift Cards</span></a></li>
+                <li><a href="/watch"><span id="">Ways to Watch</span></a></li>
+                <li><a href="https://help.netflix.com/legal/termsofuse"><span id="">Terms of Use</span></a></li>
+                <li><a href="https://help.netflix.com/legal/privacy"><span id="">Privacy</span></a></li>
+                <li><a href="#"><span id="">Cookie Preferences</span></a></li>
+                <li><a href="https://help.netflix.com/legal/corpinfo"><span id="">Corporate Information</span></a></li>
+                <li><a href="https://help.netflix.com/contactus"><span id="">Contact Us</span></a></li>
+                <li><a href="https://fast.com"><span id="">Speed Test</span></a></li>
+                <li><a href="https://help.netflix.com/legal/notices"><span id="">Legal Notices</span></a></li>
+                <li><a href="https://www.netflix.com/pe-en/browse/genre/839338"><span id="">Only on Netflix</span></a></li>
+            </ul>
+
+            <div class="lang-container">
+                <span>Select Language</span>
+                        <select>
+                            <option lang="es" value="/pe/" data-language="es" data-country="PE">Español</option>
+                            <option selected="" lang="en" value="/pe-en/" data-language="en" data-country="PE">
+                                English</option>
+                        </select>
+                <p>Netflix Peru</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
