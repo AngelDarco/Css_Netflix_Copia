@@ -311,7 +311,10 @@
     border-top: 0;
 }
 
-
+.kids .animation, .text{
+    width: 50%;
+    height: 80%;
+}
 
 .kids .text {
     display: flex;
@@ -330,6 +333,16 @@
     font-size: 1.6rem;
     font-weight: 400;
 }
+
+.kids .animation .img{
+    width: 100%;
+    height: 100%;
+}
+.kids .animation .img img{
+    width: 100%;
+    height: 100%;
+}
+
 
 /* Section Questions */
 .questions{
@@ -382,9 +395,10 @@
 }
 /* svg icon */
 .questions .container ul li button svg{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     fill: #fff;
+    transform: rotate(45deg);
 }
 
 .questions .container h1{
@@ -396,6 +410,7 @@
 .questions .container h3{
     font-size: 1.2rem;
     font-weight: 400;
+    margin-bottom: 20px;
 }
 
 
@@ -419,10 +434,13 @@ footer .container .question-call, .question-call a{
 }
 
 footer .container ul{
-       box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box;
     font-size: 13px;
     max-width: 1000px;
-
+    display: inline-block;
+    align-items: center;
+    justify-content: space-around;
 }
 footer .container ul li, li a{
     list-style-type: none;
@@ -442,7 +460,6 @@ footer .container ul li{
     display: inline-block;
     margin-bottom: 16px;
     min-width: 100px;
-    padding: 0 12px 0 0;
     vertical-align: top;
     width: 20%;
 }
@@ -451,15 +468,35 @@ footer .container .lang-container{
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: 20%;
-
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    height: 20vh;
 }
 
-footer .container .lang-container select{
-    margin: 10px 0;
-    width: 25%;
-    height: 2.5rem;
-    background-color: inherit;
+footer .container .lang-container .lenguages {
+    position: relative;
+    width: 20%;
+    height: 40%;
+}
+footer .container .lang-container .lenguages select {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
+    border: 1px solid #ffffffb6;
+    padding: 0 5px;
+    background-color: inherit;
+    font-size: 1rem;
+
+}
+footer .container .lang-container .lenguages i {
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: 1rem;
 }
