@@ -13,7 +13,7 @@
     flex-flow: column;
     width: 100%;
     height: 100vh;
-    background: var(--color-primary), url(img/portada.jpg);
+    background: var(--color-primary), url(assets/img/portada.jpg);
 }
 .portada .header {
     width: 100%;
@@ -156,6 +156,7 @@
     font-size: 19px;
     border-style: none;
     outline: none;
+    padding-left: 5%;
 }
 .portada .cuerpo .email input:active {
     border: 1px solid blue;
@@ -181,8 +182,7 @@
     fill: #fff;
 }
 
-/* Section Enjoy on your Tv */
-/* container */
+/* section containers */
 .enjoy,
 .download,
 .watch,
@@ -202,6 +202,8 @@ footer {
     position: relative;
     z-index: -200;
 }
+
+/* Section Enjoy on your Tv */
 /* title and subtitle */
 .enjoy .text {
     width: 50%;
@@ -226,33 +228,29 @@ footer {
 }
 /* tv animation */
 .enjoy .animation {
-    position: relative;
     width: 40%;
     height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.enjoy .animation img {
-    width: 100%;
-    height: 100%;
+.enjoy .animation .video__container {
     position: relative;
-}
-.enjoy .animation .video {
-    height: 100%;
-    max-height: 65%;
-    max-width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -53%);
     width: 100%;
-    z-index: -100;
+    height: 100%;
+}
+.enjoy .animation .video__container img {
+    width: 100%;
+    height: 100%;
 }
 
-.enjoy .animation .video video {
+.enjoy .animation .video__container video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    z-index: -100;
 }
 
 /* Download Section */
@@ -456,7 +454,6 @@ footer {
 
 /* questions input */
 .questions .container .email {
-    border: 1px solid red;
     width: 90%;
     height: 7rem;
     display: flex;
@@ -616,6 +613,30 @@ footer .container .lang-container .lenguages i {
         right: 0;
     }
 
+    /* containers section */
+    .enjoy,
+.download,
+.watch,
+.kids,
+.questions {
+    flex-direction: column;
+}
+
+.enjoy .text, .animation,
+.download .text, .animation,
+.watch div,
+.kids div,
+.questions div{ 
+    width: 100%;
+}
+
+/* enjoy section */
+.enjoy .text h1{
+    font-size: 2.5rem;
+}
+.enjoy .text h2{
+    font-size: 1.25rem;
+}
     @media (max-width: 500px) {
         /* portada section */
         .portada .cuerpo .email input{
@@ -623,4 +644,11 @@ footer .container .lang-container .lenguages i {
         }
     }
 
+    /* enjoy section */
+.enjoy .text h1{
+    font-size: 1.6rem;
+}
+.enjoy .text h2{
+    font-size: 1.12rem;
+}
 }
