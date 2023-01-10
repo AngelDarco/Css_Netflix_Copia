@@ -7,7 +7,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    min-width: 320px;
+}
 .portada {
     display: flex;
     flex-flow: column;
@@ -162,7 +164,7 @@
     border: 1px solid blue;
 }
 .portada .cuerpo .email button {
-    width: 30%;
+    width: 35%;
     height: 35%;
     background-color: #e50914;
     font-size: 1.3rem;
@@ -175,10 +177,10 @@
 .portada .cuerpo .email button svg {
     position: absolute;
     top: auto;
-    right: -10%;
+    right: -5%;
     top: 30%;
-    width: 40%;
-    height: 40%;
+    width: 35%;
+    height: 35%;
     fill: #fff;
 }
 
@@ -401,31 +403,34 @@ footer {
     justify-content: center;
 }
 
-.questions .container .closed {
-    display: none;
+.questions .container h1 {
+    font-size: 3.1rem;
+    line-height: 1.1;
+    margin: 1rem 0;
+    text-align: center;
 }
 
 .questions .container ul {
     width: 75%;
     height: 100%;
-    margin: 2em auto;
 }
 .questions .container ul li {
-    background-color: #303030;
     margin-bottom: 0.5rem;
     font-size: 1.6rem;
     font-weight: 400;
     width: 100%;
-    height: 4.5rem;
-
+    height: auto;
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    flex-shrink: 100%;
+    
 }
-/* icon */
+/* question container */
 .questions .container ul li button {
-    background-color: inherit;
+    background-color: #303030;
     border: none;
     color: #fff;
     font-size: 26px;
@@ -434,27 +439,26 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2rem;
+    padding: 1.2rem;
 }
+/* hiden div */
+.questions .container .closed {
+    display: none;
+    font-size: 26px;
+    background-color: #303030;
+    margin-top: .3rem;
+    padding: 1.2rem;
+}
+
 /* svg icon */
 .questions .container ul li button svg {
-    width: 30px;
-    height: 30px;
+    width: 1.1em;
+    height: 1.1em;
     fill: #fff;
     transform: rotate(45deg);
 }
 
-.questions .container h1 {
-    font-size: 3.1rem;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
-}
 
-.questions .container h3 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
 
 /* questions input */
 .questions .container .email {
@@ -462,23 +466,40 @@ footer {
     height: 7rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-direction: column;
     margin-top: 20px;
 }
 
-.questions .container .email input {
+.questions .container .email .input{
+    display: flex;
     width: 100%;
-    height: 35%;
+    height: 100%;
+}
+
+.questions .container .email h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 0 2%;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.questions .container .email .input input {
+    width: 100%;
+    max-height: 50px;
+    height: 100%;
     font-size: 19px;
     border-style: none;
     outline: none;
+    text-align: center;
 }
 .questions .container .email input:active {
     border: 1px solid blue;
 }
 .questions .container .email button {
     width: 30%;
-    height: 35%;
+    height: 70%;
     background-color: #e50914;
     font-size: 1.3rem;
     padding: 0 10px;
@@ -696,6 +717,42 @@ footer .container .lang-container .lenguages i {
     z-index: -100;
 }
 
+/* Question section */
+.questions .container h1 {
+    font-size: 2.5rem;
+}
+.questions .container ul{
+    width: 90%;
+}
+
+.questions .container ul li button {
+    font-size: 20px;
+}
+.questions .container ul li .closed{
+    font-size: 20px;
+}
+.questions .container .email{
+    height: 9rem;
+}
+.questions .container .email .input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.questions .container .email .input button{
+    font-size: 1rem;
+    width: auto;
+    height: auto;
+    flex: 1 1 auto;
+    padding: .5rem 1rem;
+    padding-right: 2rem;
+    text-align: center;
+}
+
 
     @media (max-width: 500px) {
         /* portada section */
@@ -703,16 +760,16 @@ footer .container .lang-container .lenguages i {
             width: 100%;
         }
 
-        /* section divs text h2*/
+        /* section divs text h1*/
 .enjoy .text h1, .download .text h1, .watch .text h1,
 .kids .text h1,
-.questions div h1{ 
+.questions .container h1{ 
     font-size: 1.625rem;
 }
 /* section divs text h2*/
 .enjoy .text h2, .download .text h2, .watch .text h2,
 .kids .text h2,
-.questions div h3{
+.questions .container h3{
     font-size: 1.125rem;
 }
 
@@ -725,6 +782,14 @@ footer .container .lang-container .lenguages i {
 }
     .watch .animation{
     height: 50%;
+}
+
+/* Question section */
+.questions .container ul{
+    width: 100%;
+}
+.questions .container .email{
+    height: 10rem;
 }
 
 
