@@ -7,7 +7,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+body {
     min-width: 320px;
 }
 .portada {
@@ -268,7 +268,6 @@ footer {
     height: 80%;
 }
 .download .animation .img {
-
     width: 100%;
     height: 100%;
 }
@@ -426,7 +425,6 @@ footer {
     justify-content: center;
     flex-direction: column;
     flex-shrink: 100%;
-    
 }
 /* question container */
 .questions .container ul li button {
@@ -446,7 +444,7 @@ footer {
     display: none;
     font-size: 26px;
     background-color: #303030;
-    margin-top: .3rem;
+    margin-top: 0.3rem;
     padding: 1.2rem;
 }
 
@@ -457,8 +455,6 @@ footer {
     fill: #fff;
     transform: rotate(45deg);
 }
-
-
 
 /* questions input */
 .questions .container .email {
@@ -471,7 +467,7 @@ footer {
     margin-top: 20px;
 }
 
-.questions .container .email .input{
+.questions .container .email .input {
     display: flex;
     width: 100%;
     height: 100%;
@@ -525,49 +521,49 @@ footer {
 }
 
 footer .container {
-    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
     height: 100%;
     color: #737373;
     font-size: 1em;
     padding: 70px 45px;
 }
-footer .container .question-call,
-.question-call a {
-    font-size: 16px;
+footer .container .phone,
+.phone a {
+    font-size: 1rem;
     margin-bottom: 30px;
     color: inherit;
+    width: 100%;
+    min-width: 260px;
+}
+footer .container .phone {
+    width: 100%;
+    padding: 0 70px;
+    max-width: 1000px;
 }
 
 footer .container ul {
     width: 100%;
-    box-sizing: border-box;
-    font-size: 13px;
     max-width: 1000px;
-    display: inline-block;
-    align-items: center;
-    justify-content: space-around;
+    min-width: 260px;
+    padding: 40px 70px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
 }
 footer .container ul li,
 li a {
     list-style-type: none;
     text-decoration: none;
+    text-align: start;
     color: inherit;
     font-size: 13px;
     margin-bottom: 16px;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer .container ul li {
-    box-sizing: border-box;
-    display: inline-block;
-    margin-bottom: 16px;
-    min-width: 100px;
-    vertical-align: top;
-    width: 20%;
 }
 
 footer .container .lang-container {
@@ -577,24 +573,26 @@ footer .container .lang-container {
     align-items: flex-start;
     justify-content: space-around;
     width: 100%;
+    max-width: 1000px;
+    min-width: 260px;
     height: 20vh;
+    padding-left: 70px;
 }
 
 footer .container .lang-container .lenguages {
+    width: auto;
     position: relative;
-    width: 15%;
     height: 40%;
 }
 footer .container .lang-container .lenguages select {
-    width: 100%;
     height: 100%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
-    border: 1px solid #ffffffb6;
-    padding: 0 5px;
+    border: 1px solid #333;
+    padding: 12px 26px 12px 50px;
     background-color: inherit;
     font-size: 1rem;
 }
@@ -605,11 +603,9 @@ footer .container .lang-container .lenguages i {
     color: white;
     position: absolute;
     top: 40%;
-    left: 5%;
+    left: 15%;
     font-size: 1rem;
 }
-
-
 
 @media (max-width: 950px) {
     .portada .cuerpo .titulo {
@@ -640,158 +636,191 @@ footer .container .lang-container .lenguages i {
 
     /* containers section */
     .enjoy,
-.download,
-.watch,
-.kids{
-    height: 85vh;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-}
-/* section divs */
-.enjoy .text, .animation,
-.download .text, .animation,
-.watch .text, .animation,
-.kids .animation, .text,
-.questions div{ 
-    height: 100%;
-    width: 100%;
-}
-/* section divs text h2*/
-.enjoy .text h1, .download .text h1, .watch .text h1,
-.kids .text h1,
-.questions div{ 
-    font-size: 2.5rem;
-}
-/* section divs text h2*/
-.enjoy .text h2, .download .text h2, .watch .text h2,
-.kids .text h2,
-.questions div{ 
-    font-size: 1.25rem;
-}
+    .download,
+    .watch,
+    .kids {
+        height: 85vh;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+    /* section divs */
+    .enjoy .text,
+    .animation,
+    .download .text,
+    .animation,
+    .watch .text,
+    .animation,
+    .kids .animation,
+    .text,
+    .questions div {
+        height: 100%;
+        width: 100%;
+    }
+    /* section divs text h2*/
+    .enjoy .text h1,
+    .download .text h1,
+    .watch .text h1,
+    .kids .text h1,
+    .questions div {
+        font-size: 2.5rem;
+    }
+    /* section divs text h2*/
+    .enjoy .text h2,
+    .download .text h2,
+    .watch .text h2,
+    .kids .text h2,
+    .questions div {
+        font-size: 1.25rem;
+    }
 
-/* enjoy section */
-.enjoy .text{
-    padding-top: 10%;
-    justify-content: flex-start;
-    height: 100%;
-    width: 100%;
-}
-.enjoy .animation{
-    width: 80%;
-    height: 60%;
-    position: absolute;
-    top: 25%;
-    z-index: -100;
-}
+    /* enjoy section */
+    .enjoy .text {
+        padding-top: 10%;
+        justify-content: flex-start;
+        height: 100%;
+        width: 100%;
+    }
+    .enjoy .animation {
+        width: 80%;
+        height: 60%;
+        position: absolute;
+        top: 25%;
+        z-index: -100;
+    }
 
-/* Download section */
-.download .text{
-    justify-content: flex-start;
-    padding-top: 10%;
-}
-.download .animation{
-    min-width: 350px;
-    width: 80%;
-    height: 50%;
-    position: absolute;
-    z-index: -100;
-}
+    /* Download section */
+    .download .text {
+        justify-content: flex-start;
+        padding-top: 10%;
+    }
+    .download .animation {
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        z-index: -100;
+    }
 
-/* watch section */
-.watch .animation{
-    display: flex;
-    justify-content: center;
-}
+    /* watch section */
+    .watch .animation {
+        display: flex;
+        justify-content: center;
+    }
 
-/* kids section */
-.kids .text{
-    justify-content: flex-start;
-    padding-top: 10%;
-}
-.kids .animation{
-    position: absolute;
-    margin-top: 50px;
-    width: 80%;
-    height: 50%;
-    z-index: -100;
-}
+    /* kids section */
+    .kids .text {
+        justify-content: flex-start;
+        padding-top: 10%;
+    }
+    .kids .animation {
+        position: absolute;
+        margin-top: 50px;
+        width: 80%;
+        height: 50%;
+        z-index: -100;
+    }
 
-/* Question section */
-.questions .container h1 {
-    font-size: 2.5rem;
-}
-.questions .container ul{
-    width: 90%;
-}
+    /* Question section */
+    .questions .container h1 {
+        font-size: 2.5rem;
+    }
+    .questions .container ul {
+        width: 90%;
+    }
 
-.questions .container ul li button {
-    font-size: 20px;
-}
-.questions .container ul li .closed{
-    font-size: 20px;
-}
-.questions .container .email{
-    height: 9rem;
-}
-.questions .container .email .input{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
-.questions .container .email .input button{
-    font-size: 1rem;
-    width: auto;
-    height: auto;
-    flex: 1 1 auto;
-    padding: .5rem 1rem;
-    padding-right: 2rem;
-    text-align: center;
-}
+    .questions .container ul li button {
+        font-size: 20px;
+    }
+    .questions .container ul li .closed {
+        font-size: 20px;
+    }
+    .questions .container .email {
+        height: 9rem;
+    }
+    .questions .container .email .input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .questions .container .email .input button {
+        font-size: 1rem;
+        width: auto;
+        height: auto;
+        flex: 1 1 auto;
+        padding: 0.5rem 1rem;
+        padding-right: 2rem;
+        text-align: center;
+    }
 
+    /* footer section */
+    footer .container .phone {
+        padding: 0 20px;
+    }
+    footer .container ul {
+        padding: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    footer .container .lang-container {
+        padding-left: 20px;
+    }
 
     @media (max-width: 500px) {
         /* portada section */
-        .portada .cuerpo .email input{
+        .portada .cuerpo .email input {
             width: 100%;
         }
 
         /* section divs text h1*/
-.enjoy .text h1, .download .text h1, .watch .text h1,
-.kids .text h1,
-.questions .container h1{ 
-    font-size: 1.625rem;
-}
-/* section divs text h2*/
-.enjoy .text h2, .download .text h2, .watch .text h2,
-.kids .text h2,
-.questions .container h3{
-    font-size: 1.125rem;
-}
+        .enjoy .text h1,
+        .download .text h1,
+        .watch .text h1,
+        .kids .text h1,
+        .questions .container h1 {
+            font-size: 1.625rem;
+        }
+        /* section divs text h2*/
+        .enjoy .text h2,
+        .download .text h2,
+        .watch .text h2,
+        .kids .text h2,
+        .questions .container h3 {
+            font-size: 1.125rem;
+        }
 
-/* watch section */
-.watch{
-    justify-content: center;
-}
-.watch .text{
-    height: 30%;
-}
-    .watch .animation{
-    height: 50%;
-}
+        /* watch section */
+        .watch {
+            justify-content: center;
+        }
+        .watch .text {
+            height: 30%;
+        }
+        .watch .animation {
+            height: 50%;
+        }
 
-/* Question section */
-.questions .container ul{
-    width: 100%;
-}
-.questions .container .email{
-    height: 10rem;
-}
+        /* Question section */
+        .questions .container ul {
+            width: 100%;
+        }
+        .questions .container .email {
+            height: 10rem;
+        }
 
-
-}
+        /* footer section*/
+        footer .container ul {
+            padding: 10px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        footer .container .phone {
+            width: 100%;
+            padding: 0;
+        }
+        footer .container .lang-container {
+            padding-left: 0;
+        }
+    }
 }
