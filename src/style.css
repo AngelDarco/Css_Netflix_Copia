@@ -88,25 +88,6 @@ body {
     border-style: none;
 }
 
-/* Header Querys */
-@media (max-width: 550px) {
-    .portada .header {
-        margin-top: 10px;
-        padding: 0 20px;
-    }
-    .portada .header .imagen__header svg {
-        height: 1.5rem;
-        padding-top: 0;
-        width: auto;
-    }
-    .portada .botones__header button {
-        font-size: 0.8rem;
-    }
-    .portada .botones__header .lenguages select {
-        padding: 0 0 0 20px;
-    }
-}
-
 /* Cuerpo */
 .cuerpo {
     width: 100%;
@@ -768,59 +749,78 @@ footer .container .lang-container .lenguages i {
         padding-left: 20px;
     }
 
-    @media (max-width: 500px) {
-        /* portada section */
-        .portada .cuerpo .email input {
-            width: 100%;
+    /* Header Querys */
+    @media (max-width: 550px) {
+        .portada .header {
+            margin-top: 10px;
+            padding: 0 20px;
+        }
+        .portada .header .imagen__header svg {
+            height: 1.5rem;
+            padding-top: 0;
+            width: auto;
+        }
+        .portada .botones__header button {
+            font-size: 0.8rem;
+        }
+        .portada .botones__header .lenguages select {
+            padding: 0 0 0 20px;
         }
 
-        /* section divs text h1*/
-        .enjoy .text h1,
-        .download .text h1,
-        .watch .text h1,
-        .kids .text h1,
-        .questions .container h1 {
-            font-size: 1.625rem;
-        }
-        /* section divs text h2*/
-        .enjoy .text h2,
-        .download .text h2,
-        .watch .text h2,
-        .kids .text h2,
-        .questions .container h3 {
-            font-size: 1.125rem;
-        }
+        @media (max-width: 500px) {
+            /* portada section */
+            .portada .cuerpo .email input {
+                width: 100%;
+            }
 
-        /* watch section */
-        .watch {
-            justify-content: center;
-        }
-        .watch .text {
-            height: 30%;
-        }
-        .watch .animation {
-            height: 50%;
-        }
+            /* section divs text h1*/
+            .enjoy .text h1,
+            .download .text h1,
+            .watch .text h1,
+            .kids .text h1,
+            .questions .container h1 {
+                font-size: 1.625rem;
+            }
+            /* section divs text h2*/
+            .enjoy .text h2,
+            .download .text h2,
+            .watch .text h2,
+            .kids .text h2,
+            .questions .container h3 {
+                font-size: 1.125rem;
+            }
 
-        /* Question section */
-        .questions .container ul {
-            width: 100%;
-        }
-        .questions .container .email {
-            height: 10rem;
-        }
+            /* watch section */
+            .watch {
+                justify-content: center;
+            }
+            .watch .text {
+                height: 30%;
+            }
+            .watch .animation {
+                height: 50%;
+            }
 
-        /* footer section*/
-        footer .container ul {
-            padding: 10px;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        footer .container .phone {
-            width: 100%;
-            padding: 0;
-        }
-        footer .container .lang-container {
-            padding-left: 0;
+            /* Question section */
+            .questions .container ul {
+                width: 100%;
+            }
+            .questions .container .email {
+                height: 10rem;
+            }
+
+            /* footer section*/
+            footer .container ul {
+                padding: 10px;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            footer .container .phone {
+                width: 100%;
+                padding: 0;
+            }
+            footer .container .lang-container {
+                padding-left: 0;
+            }
         }
     }
 }
