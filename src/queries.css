@@ -1,0 +1,9 @@
+@media (max-width: 1280px) {
+  body {
+    .portada {
+      .header {
+        padding: 1.5rem 2rem;
+      }
+    }
+  }
+}
