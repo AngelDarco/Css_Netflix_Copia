@@ -1,25 +1,19 @@
 {
-  "name": "css_netflix_copia",
-  "version": "1.0.0",
-  "description": "[original](https://www.netflix.com/)",
-  "main": "index.js",
+  "name": "test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eme92/Netflix_Copia.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/eme92/Netflix_Copia/issues"
-  },
-  "homepage": "https://github.com/eme92/Netflix_Copia#readme",
   "devDependencies": {
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "@rollup/plugin-html": "^1.0.3",
+    "vite-plugin-html": "^3.2.2"
   }
 }
