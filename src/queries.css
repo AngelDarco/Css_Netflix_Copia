@@ -6,4 +6,65 @@
       }
     }
   }
+
+  @media (max-width: 960px) {
+    body {
+      .portada {
+        .header {
+          .logo__header {
+            width: 5.5rem;
+            height: 1.5rem;
+          }
+        }
+
+        .cuerpo {
+          max-width: calc(100% - 4rem);
+
+          .titulo {
+            font-size: 2rem;
+            font-weight: 700;
+          }
+
+          .subtitulo {
+            font-size: 1.1rem;
+          }
+          .email {
+            .subtitulo2 {
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 600px) {
+      body {
+        .portada {
+          .header {
+            .botones__header {
+              .lenguages {
+                select {
+                  font-size: 0px;
+                }
+              }
+            }
+          }
+        }
+
+        .cuerpo {
+          .titulo {
+            font-size: 2rem;
+          }
+          .subtitle {
+            font-size: 1.1rem;
+          }
+
+          .email {
+            .form {
+              flex-direction: column;
+            }
+          }
+        }
+      }
+    }
+  }
 }

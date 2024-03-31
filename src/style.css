@@ -1,5 +1,10 @@
 @import url(./queries.css);
-
+@font-face {
+  font-family: Netflix Sans;
+  src: url(./assets/fonts/NetflixSans_W_Blk.woff2) format("woff2");
+  src: url(./assets/fonts/NetflixSans_W_Md.woff2) format("woff2");
+  src: url(./assets/fonts/NetflixSans_W_Rg.woff2) format("woff2");
+}
 :root {
   --color-primary: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
@@ -8,18 +13,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
 }
-body {
+body section {
   min-width: 320px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .portada {
   display: flex;
   flex-flow: column;
-  width: 100%;
-  height: 100vh;
+  min-height: 32rem;
+  padding: 8.5rem 0 3rem;
   background: var(--color-primary), url(assets/img/portada.jpg);
 
   .header {
+    position: absolute;
+    top: 0;
     width: 100%;
     display: flex;
     align-items: center;
@@ -49,15 +64,13 @@ body {
       .lenguages {
         border: 1px solid #a1a1a1;
         display: flex;
-        padding: 0.5rem;
+        align-items: center;
         height: 2rem;
+        border-radius: 0.2rem;
+        padding: 0 1rem;
 
         svg {
           color: #ffffff;
-          /* position: absolute;
-          top: 30%;
-          left: 5%; 
-          font-size: 5rem;*/
         }
 
         select {
@@ -69,8 +82,12 @@ body {
           justify-content: center;
           color: #fff;
           border: none;
-          padding: 0 8px;
           background-color: inherit;
+          padding: 6px 0;
+
+          &:focus-visible {
+            outline: none;
+          }
         }
 
         select option {
@@ -80,6 +97,7 @@ body {
       }
 
       button {
+        border-radius: 0.5rem;
         width: fit-content;
         padding: 5px 10px;
         background-color: #e50914;
@@ -91,82 +109,104 @@ body {
       }
     }
   }
-}
-/* Cuerpo */
-.cuerpo {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
 
-  .titulo,
-  .subtitulo,
-  .subtitulo2,
-  .email {
-    max-width: 640px;
-    text-align: center;
-    padding: 0 20px;
-  }
-  .titulo {
+  /* Cuerpo */
+  .cuerpo {
     width: 100%;
     height: auto;
-    text-align: center;
-    font-size: 3.1rem;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  }
-
-  .subtitulo {
-    font-size: 19px;
-    margin: 20px 0;
-  }
-
-  .subtitulo2 {
-    width: 60%;
-    font-size: 17px;
-  }
-
-  .email {
-    width: 90%;
-    height: 30%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-
-  .email input {
-    width: 100%;
-    height: 35%;
-    font-size: 19px;
-    border-style: none;
-    outline: none;
-    padding-left: 5%;
-  }
-  .email input:active {
-    border: 1px solid blue;
-  }
-  .email button {
-    width: 35%;
-    height: 35%;
-    background-color: #e50914;
-    font-size: 1.3rem;
-    padding: 0 10px;
+    justify-content: center;
     color: #fff;
-    border-style: none;
-    text-align: start;
-    position: relative;
-  }
-  .email button svg {
-    position: absolute;
-    top: auto;
-    right: -5%;
-    top: 30%;
-    width: 35%;
-    height: 35%;
-    fill: #fff;
+
+    .titulo,
+    .subtitulo,
+    .subtitulo2,
+    .email {
+      text-align: center;
+      padding: 0 20px;
+      width: 100%;
+    }
+    .titulo {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 900;
+    }
+
+    .subtitulo {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin: 1rem 0 0;
+    }
+
+    .email {
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+      margin-top: 1.5rem;
+      min-width: 12.5rem;
+      max-width: 55rem;
+
+      .subtitulo2 {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+      }
+
+      .form {
+        display: flex;
+        margin: 1.5rem;
+        gap: 1.5rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        input {
+          font-size: 1rem;
+          font-weight: 500;
+          border-radius: 0.25rem;
+          background-color: transparent;
+
+          max-width: 23rem;
+          width: 100%;
+          height: 100%;
+          color: inherit;
+          padding: 1.5rem 1rem 0.5rem;
+
+          background: #161616b3;
+          border: 1px solid #808080b3;
+
+          &:active {
+            border: 1px solid blue;
+          }
+        }
+        button {
+          width: 13rem;
+          height: 100%;
+          min-height: 3.5rem;
+          background-color: #e50914;
+          font-size: 1.5rem;
+          border-radius: 0.25rem;
+          padding: 0 10px;
+          color: #fff;
+          border-style: none;
+          text-align: start;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-wrap: nowrap;
+
+          svg {
+            fill: #fff;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -598,32 +638,6 @@ footer {
 }
 
 @media (max-width: 950px) {
-  .portada .cuerpo .titulo {
-    font-size: 2.5rem;
-  }
-  .portada .cuerpo .email {
-    flex-direction: column;
-    justify-content: initial;
-    height: 20%;
-  }
-  .portada .cuerpo .email input {
-    margin-bottom: 15px;
-    width: 80%;
-    height: 30%;
-  }
-  .portada .cuerpo .email button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    padding-right: 40px;
-    height: 25%;
-    font-size: 0.9rem;
-  }
-  .portada .cuerpo .email button svg {
-    right: 0;
-  }
-
   /* containers section */
   .enjoy,
   .download,
@@ -777,11 +791,6 @@ footer {
     }
 
     @media (max-width: 500px) {
-      /* portada section */
-      .portada .cuerpo .email input {
-        width: 100%;
-      }
-
       /* section divs text h1*/
       .enjoy .text h1,
       .download .text h1,
