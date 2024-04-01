@@ -1,21 +1,24 @@
-@import url(./queries.css);
+@import url("./queries.css");
+
 @font-face {
-  font-family: Netflix Sans;
-  src: url(./assets/fonts/NetflixSans_W_Blk.woff2) format("woff2");
-  src: url(./assets/fonts/NetflixSans_W_Md.woff2) format("woff2");
-  src: url(./assets/fonts/NetflixSans_W_Rg.woff2) format("woff2");
+  font-family: "Netflix Sans";
+  src: url("./assets/fonts/NetflixSans_W_Blk.woff2") format("woff2");
+  src: url("./assets/fonts/NetflixSans_W_Md.woff2") format("woff2");
+  src: url("./assets/fonts/NetflixSans_W_Rg.woff2") format("woff2");
 }
+
 :root {
-  --color-primary: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  --color-primary: linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%));
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+  font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu,
     sans-serif;
 }
+
 body section {
   min-width: 320px;
   width: 100%;
@@ -24,13 +27,18 @@ body section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-top: 10px solid rgb(59 56 56);
+  border-bottom: 10px solid rgb(59 56 56);
+  background-color: #000;
 }
+
 .portada {
   display: flex;
+  min-height: 40rem;
   flex-flow: column;
-  min-height: 32rem;
   padding: 8.5rem 0 3rem;
-  background: var(--color-primary), url(assets/img/portada.jpg);
+  background: var(--color-primary), url("assets/img/portada.jpg");
+  border: 0;
 
   .header {
     position: absolute;
@@ -41,7 +49,7 @@ body section {
     justify-content: space-between;
     padding: 1.5rem 10rem;
 
-    .logo__header {
+    .logo-header {
       width: 9.25rem;
       height: 2.5;
       display: flex;
@@ -54,7 +62,7 @@ body section {
       }
     }
 
-    .botones__header {
+    .botones-header {
       width: fit-content;
       height: 2rem;
       display: flex;
@@ -62,7 +70,7 @@ body section {
       gap: 20px;
 
       .lenguages {
-        border: 1px solid #a1a1a1;
+        border: 1px solid #808080b3;
         display: flex;
         align-items: center;
         height: 2rem;
@@ -70,7 +78,7 @@ body section {
         padding: 0 1rem;
 
         svg {
-          color: #ffffff;
+          color: #fff;
         }
 
         select {
@@ -97,7 +105,6 @@ body section {
       }
 
       button {
-        border-radius: 0.5rem;
         width: fit-content;
         padding: 5px 10px;
         background-color: #e50914;
@@ -128,6 +135,7 @@ body section {
       padding: 0 20px;
       width: 100%;
     }
+
     .titulo {
       text-align: center;
       font-size: 3rem;
@@ -157,7 +165,6 @@ body section {
       }
 
       .form {
-        display: flex;
         margin: 1.5rem;
         gap: 1.5rem;
         width: 100%;
@@ -170,26 +177,26 @@ body section {
           font-weight: 500;
           border-radius: 0.25rem;
           background-color: transparent;
-
           max-width: 23rem;
           width: 100%;
           height: 100%;
           color: inherit;
           padding: 1.5rem 1rem 0.5rem;
-
           background: #161616b3;
           border: 1px solid #808080b3;
 
-          &:active {
+          /* &:active {
             border: 1px solid blue;
-          }
+          } */
         }
+
         button {
           width: 13rem;
           height: 100%;
           min-height: 3.5rem;
           background-color: #e50914;
           font-size: 1.5rem;
+          font-weight: 500;
           border-radius: 0.25rem;
           padding: 0 10px;
           color: #fff;
@@ -217,71 +224,61 @@ body section {
 .kids,
 .questions,
 footer {
-  background-color: #000;
   color: #fff;
   width: 100%;
-  height: 70vh;
   display: flex;
   flex-direction: row wrap;
   align-items: center;
   justify-content: space-around;
-  border-top: 10px solid rgb(59, 56, 56);
-  border-bottom: 10px solid rgb(59, 56, 56);
-  position: relative;
-  z-index: -200;
+  padding: 4.5rem 0;
+  max-width: calc(100% - 4rem);
 }
 
 /* Section Enjoy on your Tv */
+
 /* title and subtitle */
 .enjoy {
   .text {
     width: 50%;
     height: 100%;
     display: flex;
-    align-items: center;
-    flex-flow: column;
-    justify-content: center;
-    color: #fff;
+    flex-direction: column;
 
-    .text h1 {
+    h1 {
       font-size: 3.1rem;
       font-weight: bold;
       line-height: 1.1;
       margin-bottom: 0.5rem;
-      text-align: center;
     }
-    .text h2 {
-      padding: 4% 20%;
-      font-size: 1.65rem;
+
+    h2 {
+      font-size: 1.5rem;
       font-weight: 400;
     }
   }
+
   /* tv animation */
   .animation {
-    width: 40%;
+    width: 50%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .animation .video__container {
     position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  .animation .video__container img {
-    width: 100%;
-    height: 100%;
-  }
 
-  .animation .video__container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 90%;
-    width: 100%;
-    height: 100%;
-    z-index: -100;
+    img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 10;
+    }
+
+    video {
+      position: absolute;
+      top: 47%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 74%;
+      height: 100%;
+      z-index: 0;
+    }
   }
 }
 
@@ -295,10 +292,12 @@ footer {
     width: 50%;
     height: 80%;
   }
+
   .animation .img {
     width: 100%;
     height: 100%;
   }
+
   .animation .img img {
     width: 100%;
     height: 100%;
@@ -311,11 +310,13 @@ footer {
     justify-content: center;
     text-align: center;
   }
+
   .text h1 {
     font-size: 3.1rem;
     line-height: 1.1;
     margin-bottom: 0.5rem;
   }
+
   .text h2 {
     font-size: 1.6rem;
     font-weight: 400;
@@ -332,6 +333,7 @@ footer {
     width: 50%;
     height: 80%;
   }
+
   .text {
     padding: 0 30px;
     text-align: center;
@@ -340,11 +342,13 @@ footer {
     align-items: center;
     justify-content: center;
   }
+
   .text h1 {
     font-size: 3.1rem;
     line-height: 1.1;
     margin-bottom: 0.5rem;
   }
+
   .text h2 {
     font-size: 1.6rem;
     font-weight: 400;
@@ -363,6 +367,7 @@ footer {
     width: 100%;
     height: 100%;
   }
+
   .animation .img .video {
     position: absolute;
     width: 60%;
@@ -372,6 +377,7 @@ footer {
     transform: translate(-50%, -50%);
     z-index: -100;
   }
+
   .animation .img .video video {
     width: 100%;
     height: 100%;
@@ -397,11 +403,13 @@ footer {
     text-align: center;
     padding: 0 1rem;
   }
+
   .text h1 {
     font-size: 3.1rem;
     line-height: 1.1;
     margin-bottom: 0.5rem;
   }
+
   .text h2 {
     font-size: 1.6rem;
     font-weight: 400;
@@ -411,6 +419,7 @@ footer {
     width: 100%;
     height: 100%;
   }
+
   .animation .img img {
     width: 100%;
     height: 100%;
@@ -442,6 +451,7 @@ footer {
     width: 75%;
     height: 100%;
   }
+
   .container ul li {
     margin-bottom: 0.5rem;
     font-size: 1.6rem;
@@ -455,6 +465,7 @@ footer {
     flex-direction: column;
     flex-shrink: 100%;
   }
+
   /* question container */
   .container ul li button {
     background-color: #303030;
@@ -468,6 +479,7 @@ footer {
     justify-content: space-between;
     padding: 1.2rem;
   }
+
   /* hiden div */
   .container .closed {
     display: none;
@@ -519,9 +531,11 @@ footer {
     outline: none;
     text-align: center;
   }
+
   .container .email input:active {
     border: 1px solid blue;
   }
+
   .container .email button {
     width: 30%;
     height: 70%;
@@ -533,6 +547,7 @@ footer {
     text-align: start;
     position: relative;
   }
+
   .container .email button svg {
     position: absolute;
     top: 30%;
@@ -560,6 +575,7 @@ footer {
     font-size: 1em;
     padding: 70px 45px;
   }
+
   .container .phone,
   .phone a {
     font-size: 1rem;
@@ -568,6 +584,7 @@ footer {
     width: 100%;
     min-width: 260px;
   }
+
   .container .phone {
     width: 100%;
     padding: 0 70px;
@@ -583,6 +600,7 @@ footer {
     gap: 10px;
     grid-template-columns: repeat(4, 1fr);
   }
+
   .container ul li,
   li a {
     list-style-type: none;
@@ -613,6 +631,7 @@ footer {
     position: relative;
     height: 40%;
   }
+
   .container .lang-container .lenguages select {
     height: 100%;
     text-align: center;
@@ -625,9 +644,11 @@ footer {
     background-color: inherit;
     font-size: 1rem;
   }
+
   .container .lang-container .lenguages select option {
     background-color: #444;
   }
+
   .container .lang-container .lenguages i {
     color: white;
     position: absolute;
@@ -637,31 +658,28 @@ footer {
   }
 }
 
-@media (max-width: 950px) {
+@media (width <= 950px) {
   /* containers section */
   .enjoy,
   .download,
   .watch,
   .kids {
-    height: 85vh;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    position: relative;
   }
+
   /* section divs */
-  .enjoy .text,
   .animation,
-  .download .text,
-  .animation,
-  .watch .text,
-  .animation,
-  .kids .animation,
   .text,
   .questions div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     width: 100%;
   }
-  /* section divs text h2*/
+
+  /* section divs text h2 */
   .enjoy .text h1,
   .download .text h1,
   .watch .text h1,
@@ -669,7 +687,8 @@ footer {
   .questions div {
     font-size: 2.5rem;
   }
-  /* section divs text h2*/
+
+  /* section divs text h2 */
   .enjoy .text h2,
   .download .text h2,
   .watch .text h2,
@@ -678,26 +697,12 @@ footer {
     font-size: 1.25rem;
   }
 
-  /* enjoy section */
-  .enjoy .text {
-    padding-top: 10%;
-    justify-content: flex-start;
-    height: 100%;
-    width: 100%;
-  }
-  .enjoy .animation {
-    width: 80%;
-    height: 60%;
-    position: absolute;
-    top: 25%;
-    z-index: -100;
-  }
-
   /* Download section */
   .download .text {
     justify-content: flex-start;
     padding-top: 10%;
   }
+
   .download .animation {
     width: 100%;
     height: 50%;
@@ -716,6 +721,7 @@ footer {
     justify-content: flex-start;
     padding-top: 10%;
   }
+
   .kids .animation {
     position: absolute;
     margin-top: 50px;
@@ -728,6 +734,7 @@ footer {
   .questions .container h1 {
     font-size: 2.5rem;
   }
+
   .questions .container ul {
     width: 90%;
   }
@@ -735,12 +742,15 @@ footer {
   .questions .container ul li button {
     font-size: 20px;
   }
+
   .questions .container ul li .closed {
     font-size: 20px;
   }
+
   .questions .container .email {
     height: 9rem;
   }
+
   .questions .container .email .input {
     display: flex;
     align-items: center;
@@ -750,6 +760,7 @@ footer {
     width: 100%;
     height: 100%;
   }
+
   .questions .container .email .input button {
     font-size: 1rem;
     width: auto;
@@ -764,34 +775,39 @@ footer {
   footer .container .phone {
     padding: 0 20px;
   }
+
   footer .container ul {
     padding: 20px;
     grid-template-columns: repeat(3, 1fr);
   }
+
   footer .container .lang-container {
     padding-left: 20px;
   }
 
   /* Header Querys */
-  @media (max-width: 550px) {
+  @media (width <= 550px) {
     .portada .header {
       margin-top: 10px;
       padding: 0 20px;
     }
-    .portada .header .logo__header svg {
+
+    .portada .header .logo-header svg {
       height: 1.5rem;
       padding-top: 0;
       width: auto;
     }
-    .portada .botones__header button {
+
+    .portada .botones-header button {
       font-size: 0.8rem;
     }
-    .portada .botones__header .lenguages select {
+
+    .portada .botones-header .lenguages select {
       padding: 0 0 0 20px;
     }
 
-    @media (max-width: 500px) {
-      /* section divs text h1*/
+    @media (width <= 500px) {
+      /* section divs text h1 */
       .enjoy .text h1,
       .download .text h1,
       .watch .text h1,
@@ -799,7 +815,8 @@ footer {
       .questions .container h1 {
         font-size: 1.625rem;
       }
-      /* section divs text h2*/
+
+      /* section divs text h2 */
       .enjoy .text h2,
       .download .text h2,
       .watch .text h2,
@@ -812,9 +829,11 @@ footer {
       .watch {
         justify-content: center;
       }
+
       .watch .text {
         height: 30%;
       }
+
       .watch .animation {
         height: 50%;
       }
@@ -823,19 +842,22 @@ footer {
       .questions .container ul {
         width: 100%;
       }
+
       .questions .container .email {
         height: 10rem;
       }
 
-      /* footer section*/
+      /* footer section */
       footer .container ul {
         padding: 10px;
         grid-template-columns: repeat(2, 1fr);
       }
+
       footer .container .phone {
         width: 100%;
         padding: 0;
       }
+
       footer .container .lang-container {
         padding-left: 0;
       }
