@@ -101,6 +101,30 @@
       .kids {
         flex-direction: column-reverse;
       }
+
+      .questions {
+        ul {
+          li {
+            button {
+              font-size: 1.1rem;
+
+              img {
+                width: 1.5rem;
+              }
+            }
+          }
+
+          .answer {
+            font-size: 1.1rem;
+          }
+        }
+
+        .email {
+          h3 {
+            font-size: 1.1rem;
+          }
+        }
+      }
     }
 
     @media (width <= 600px) {
@@ -161,6 +185,26 @@
             .download-card {
               .logo {
                 height: 3rem;
+              }
+            }
+          }
+        }
+
+        .questions {
+          .email {
+            .form {
+              flex-direction: column;
+              padding: 0;
+
+              input {
+                max-width: 100%;
+              }
+
+              button {
+                width: max-content;
+                padding: 0.5rem 1rem;
+                font-size: 1.4rem;
+                font-weight: 400;
               }
             }
           }

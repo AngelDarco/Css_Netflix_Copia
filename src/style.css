@@ -376,77 +376,82 @@ footer {
 
 /* Section Questions */
 .questions {
-  height: fit-content;
-  border-top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  .container {
-    padding: 2rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  /* transition: all 1s ease-in-out; */
 
-  .container h1 {
+  h1 {
     font-size: 3.1rem;
+    font-weight: 900;
     line-height: 1.1;
-    margin: 1rem 0;
+    margin-bottom: 1.5rem;
     text-align: center;
   }
 
-  .container ul {
-    width: 75%;
-    height: 100%;
-  }
-
-  .container ul li {
-    margin-bottom: 0.5rem;
-    font-size: 1.6rem;
-    font-weight: 400;
+  ul {
     width: 100%;
-    height: auto;
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-shrink: 100%;
-  }
 
-  /* question container */
-  .container ul li button {
-    background-color: #303030;
-    border: none;
-    color: #fff;
-    font-size: 26px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.2rem;
-  }
+    li {
+      margin-bottom: 0.5rem;
+      list-style-type: none;
+      padding: 1.5rem 0;
+      padding-bottom: 0;
+      background-color: #303030;
 
-  /* hiden div */
-  .container .closed {
-    display: none;
-    font-size: 26px;
-    background-color: #303030;
-    margin-top: 0.3rem;
-    padding: 1.2rem;
-  }
+      /* question container */
+      button {
+        padding: 0 1.5rem;
+        padding-bottom: 1.5rem;
+        color: #fff;
+        font-size: 1.5rem;
+        text-align: start;
+        background-color: inherit;
+        border: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
 
-  /* svg icon */
-  .container ul li button svg {
-    width: 1.1em;
-    height: 1.1em;
-    fill: #fff;
-    transform: rotate(45deg);
+    :hover {
+      background-color: #414141;
+    }
+
+    /* hiden div */
+    .answer {
+      display: none;
+      opacity: 0;
+      font-size: 26px;
+      background-color: #303030;
+      margin-top: 0.3rem;
+      width: 100%;
+      height: 100%;
+      padding: 1.2rem;
+      border-top: 2px solid #000;
+
+      :hover {
+        background-color: inherit;
+      }
+    }
+
+    .show {
+      display: block;
+      transition: opacity 1s ease-in-out;
+      opacity: 1;
+    }
+
+    .rotate {
+      transform: rotate(45deg);
+    }
   }
 
   /* questions input */
-  .container .email {
+  .email {
     width: 90%;
     height: 7rem;
     display: flex;
@@ -454,77 +459,72 @@ footer {
     justify-content: space-between;
     flex-direction: column;
     margin-top: 20px;
-  }
 
-  .container .email .input {
-    display: flex;
-    width: 100%;
-    height: 100%;
-  }
+    h3 {
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
 
-  .container .email h3 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    padding: 0 2%;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
+    .form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 0 2rem;
+      gap: 1rem;
 
-  .container .email .input input {
-    width: 100%;
-    max-height: 50px;
-    height: 100%;
-    font-size: 19px;
-    border-style: none;
-    outline: none;
-    text-align: center;
-  }
+      input {
+        width: 100%;
+        max-height: 3.5rem;
+        max-width: 23rem;
+        height: 100%;
+        font-size: 19px;
+        border-style: none;
+        outline: none;
+        border-radius: 0.2rem;
+        padding: 1.5rem 1rem 0.5rem;
+        background: #161616b3;
+        border: 1px solid #808080b3;
+      }
 
-  .container .email input:active {
-    border: 1px solid blue;
-  }
-
-  .container .email button {
-    width: 30%;
-    height: 70%;
-    background-color: #e50914;
-    font-size: 1.3rem;
-    padding: 0 10px;
-    color: #fff;
-    border-style: none;
-    text-align: start;
-    position: relative;
-  }
-
-  .container .email button svg {
-    position: absolute;
-    top: 30%;
-    right: -10%;
-    width: 40%;
-    height: 40%;
-    fill: #fff;
+      button {
+        width: 100%;
+        max-width: 13rem;
+        height: 100%;
+        max-height: 3.5rem;
+        background-color: #e50914;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #fff;
+        border-style: none;
+        border-radius: 0.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
 }
 
 /* Footer */
 footer {
   border-top: 0;
-  height: fit-content;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  color: #737373;
+  font-size: 1em;
+  padding: 70px 45px;
 
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 90%;
-    height: 100%;
-    color: #737373;
-    font-size: 1em;
-    padding: 70px 45px;
-  }
-
-  .container .phone,
+  .phone,
   .phone a {
     font-size: 1rem;
     margin-bottom: 30px;
@@ -533,13 +533,13 @@ footer {
     min-width: 260px;
   }
 
-  .container .phone {
+  .phone {
     width: 100%;
     padding: 0 70px;
     max-width: 1000px;
   }
 
-  .container ul {
+  ul {
     width: 100%;
     max-width: 1000px;
     min-width: 260px;
@@ -549,7 +549,7 @@ footer {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .container ul li,
+  ul li,
   li a {
     list-style-type: none;
     text-decoration: none;
@@ -561,7 +561,7 @@ footer {
     height: 100%;
   }
 
-  .container .lang-container {
+  .lang-container {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -574,13 +574,13 @@ footer {
     padding-left: 70px;
   }
 
-  .container .lang-container .lenguages {
+  .lang-container .lenguages {
     width: auto;
     position: relative;
     height: 40%;
   }
 
-  .container .lang-container .lenguages select {
+  .lang-container .lenguages select {
     height: 100%;
     text-align: center;
     display: flex;
@@ -593,11 +593,11 @@ footer {
     font-size: 1rem;
   }
 
-  .container .lang-container .lenguages select option {
+  .lang-container .lenguages select option {
     background-color: #444;
   }
 
-  .container .lang-container .lenguages i {
+  .lang-container .lenguages i {
     color: white;
     position: absolute;
     top: 40%;
@@ -608,27 +608,27 @@ footer {
 
 @media (width <= 950px) {
   /* Question section */
-  .questions .container h1 {
+  .questions h1 {
     font-size: 2.5rem;
   }
 
-  .questions .container ul {
+  .questions ul {
     width: 90%;
   }
 
-  .questions .container ul li button {
+  .questions ul li button {
     font-size: 20px;
   }
 
-  .questions .container ul li .closed {
+  .questions ul li .closed {
     font-size: 20px;
   }
 
-  .questions .container .email {
+  .questions .email {
     height: 9rem;
   }
 
-  .questions .container .email .input {
+  .questions .email .input {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -638,7 +638,7 @@ footer {
     height: 100%;
   }
 
-  .questions .container .email .input button {
+  .questions .email .input button {
     font-size: 1rem;
     width: auto;
     height: auto;
@@ -649,16 +649,16 @@ footer {
   }
 
   /* footer section */
-  footer .container .phone {
+  footer .phone {
     padding: 0 20px;
   }
 
-  footer .container ul {
+  footer ul {
     padding: 20px;
     grid-template-columns: repeat(3, 1fr);
   }
 
-  footer .container .lang-container {
+  footer .lang-container {
     padding-left: 20px;
   }
 
@@ -685,26 +685,26 @@ footer {
 
     @media (width <= 500px) {
       /* Question section */
-      .questions .container ul {
+      .questions ul {
         width: 100%;
       }
 
-      .questions .container .email {
+      .questions .email {
         height: 10rem;
       }
 
       /* footer section */
-      footer .container ul {
+      footer ul {
         padding: 10px;
         grid-template-columns: repeat(2, 1fr);
       }
 
-      footer .container .phone {
+      footer .phone {
         width: 100%;
         padding: 0;
       }
 
-      footer .container .lang-container {
+      footer .lang-container {
         padding-left: 0;
       }
     }
