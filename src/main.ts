@@ -4,13 +4,14 @@
 
   close.forEach((element: HTMLDivElement) => {
     element.addEventListener("click", (e) => {
-      const icon: EventTarget | null = e.target;
-      const text: HTMLDivElement =
-        icon?.parentElement.parentElement.lastElementChild;
+      const icon = e.currentTarget as HTMLDivElement;
+      const parent = icon.parentElement as HTMLDivElement;
+      const grandParent = parent.parentElement as HTMLDivElement;
+      const lastElementChild = grandParent.lastElementChild;
 
       // hide all messages
       message.forEach((element: HTMLDivElement) => {
-        if (element.classList.contains("show") && element !== text)
+        if (element.classList.contains("show") && element !== lastElementChild)
           element.classList.remove("show");
       });
 
@@ -24,13 +25,12 @@
       // change icon
       if (icon) icon.classList.toggle("rotate");
 
-      // show text
-      if (text.classList.contains("show")) text.classList.remove("show");
-      else text.classList.add("show");
-
-      // console.log(icon, message);
-
-      // element.parentElement?.classList.toggle("show");
+      // show lastElementChild
+      if (lastElementChild) {
+        if (lastElementChild.classList.contains("show"))
+          lastElementChild.classList.remove("show");
+        else lastElementChild.classList.add("show");
+      }
     });
   });
 })();
