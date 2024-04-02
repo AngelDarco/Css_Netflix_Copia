@@ -6,7 +6,7 @@
     .watch,
     .kids,
     .questions,
-    footer {
+    .footer {
       max-width: calc(100% - 4rem);
     }
 
@@ -24,7 +24,7 @@
       .watch,
       .kids,
       .questions,
-      footer {
+      .footer {
         flex-direction: column;
         min-height: 40rem;
         max-width: calc(100% - 4rem);
@@ -125,6 +125,12 @@
           }
         }
       }
+
+      .footer {
+        ul {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+      }
     }
 
     @media (width <= 600px) {
@@ -135,7 +141,7 @@
 
           .header {
             .botones-header {
-              .lenguages {
+              .languages {
                 select {
                   font-size: 0;
                 }

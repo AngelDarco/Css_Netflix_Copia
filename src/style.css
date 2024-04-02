@@ -20,7 +20,9 @@
     sans-serif;
 }
 
-body section {
+body header,
+body section,
+body footer {
   min-width: 320px;
   width: 100%;
   height: auto;
@@ -28,7 +30,7 @@ body section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-bottom: 10px solid rgb(59 56 56);
+  border-bottom: 0.5rem solid rgb(35 35 35);
   background-color: #000;
 }
 
@@ -68,7 +70,8 @@ body section {
       align-items: center;
       gap: 20px;
 
-      .lenguages {
+      .languages {
+        background-color: #161616b3;
         border: 1px solid #808080b3;
         display: flex;
         align-items: center;
@@ -89,17 +92,18 @@ body section {
           justify-content: center;
           color: #fff;
           border: none;
-          background-color: inherit;
+          background-color: transparent;
           padding: 6px 0;
 
           &:focus-visible {
             outline: none;
           }
-        }
 
-        select option {
-          background-color: #444;
-          text-align: center;
+          option {
+            background-color: #444;
+            text-align: center;
+            width: 100%;
+          }
         }
       }
 
@@ -175,13 +179,12 @@ body section {
           font-size: 1rem;
           font-weight: 500;
           border-radius: 0.25rem;
-          background-color: transparent;
           max-width: 23rem;
           width: 100%;
           height: 100%;
           color: inherit;
           padding: 1.5rem 1rem 0.5rem;
-          background: #161616b3;
+          background-color: #161616b3;
           border: 1px solid #808080b3;
 
           /* &:active {
@@ -222,7 +225,7 @@ body section {
 .watch,
 .kids,
 .questions,
-footer {
+.footer {
   color: #fff;
   width: 100%;
   display: flex;
@@ -512,201 +515,75 @@ footer {
 
 /* Footer */
 footer {
-  border-top: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 90%;
-  height: 100%;
-  color: #737373;
-  font-size: 1em;
-  padding: 70px 45px;
+  border-bottom: 0 !important;
 
-  .phone,
-  .phone a {
-    font-size: 1rem;
-    margin-bottom: 30px;
-    color: inherit;
-    width: 100%;
-    min-width: 260px;
-  }
-
-  .phone {
-    width: 100%;
-    padding: 0 70px;
-    max-width: 1000px;
-  }
-
-  ul {
-    width: 100%;
-    max-width: 1000px;
-    min-width: 260px;
-    padding: 40px 70px;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  ul li,
-  li a {
-    list-style-type: none;
-    text-decoration: none;
-    text-align: start;
-    color: inherit;
-    font-size: 13px;
-    margin-bottom: 16px;
-    width: 100%;
-    height: 100%;
-  }
-
-  .lang-container {
-    margin-top: 20px;
-    display: flex;
+  .footer {
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 1000px;
-    min-width: 260px;
-    height: 20vh;
-    padding-left: 70px;
-  }
+    justify-content: unset;
+    gap: 1.5rem;
 
-  .lang-container .lenguages {
-    width: auto;
-    position: relative;
-    height: 40%;
-  }
-
-  .lang-container .lenguages select {
-    height: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    border: 1px solid #333;
-    padding: 12px 26px 12px 50px;
-    background-color: inherit;
-    font-size: 1rem;
-  }
-
-  .lang-container .lenguages select option {
-    background-color: #444;
-  }
-
-  .lang-container .lenguages i {
-    color: white;
-    position: absolute;
-    top: 40%;
-    left: 15%;
-    font-size: 1rem;
-  }
-}
-
-@media (width <= 950px) {
-  /* Question section */
-  .questions h1 {
-    font-size: 2.5rem;
-  }
-
-  .questions ul {
-    width: 90%;
-  }
-
-  .questions ul li button {
-    font-size: 20px;
-  }
-
-  .questions ul li .closed {
-    font-size: 20px;
-  }
-
-  .questions .email {
-    height: 9rem;
-  }
-
-  .questions .email .input {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-  }
-
-  .questions .email .input button {
-    font-size: 1rem;
-    width: auto;
-    height: auto;
-    flex: 1 1 auto;
-    padding: 0.5rem 1rem;
-    padding-right: 2rem;
-    text-align: center;
-  }
-
-  /* footer section */
-  footer .phone {
-    padding: 0 20px;
-  }
-
-  footer ul {
-    padding: 20px;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  footer .lang-container {
-    padding-left: 20px;
-  }
-
-  /* Header Querys */
-  @media (width <= 550px) {
-    .portada .header {
-      margin-top: 10px;
-      padding: 0 20px;
+    .phone,
+    .phone a {
+      font-size: 1rem;
+      width: 100%;
+      color: #ffffffb3;
     }
 
-    .portada .header .logo-header svg {
-      height: 1.5rem;
-      padding-top: 0;
-      width: auto;
+    ul {
+      width: 100%;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+
+      li,
+      a {
+        list-style-type: none;
+        text-align: start;
+        color: #ffffffb3;
+        font-size: 13px;
+      }
     }
 
-    .portada .botones-header button {
-      font-size: 0.8rem;
-    }
+    .languages {
+      border: 1px solid #808080b3;
+      display: flex;
+      align-items: center;
+      height: 2rem;
+      border-radius: 0.2rem;
+      padding: 0 1rem;
+      background-color: #161616b3;
 
-    .portada .botones-header .lenguages select {
-      padding: 0 0 0 20px;
-    }
+      svg {
+        color: #fff;
+      }
 
-    @media (width <= 500px) {
-      /* Question section */
-      .questions ul {
+      select {
+        font-size: 1rem;
         width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        border: none;
+        background-color: transparent;
+        padding: 6px 0;
+
+        &:focus-visible {
+          outline: none;
+        }
       }
 
-      .questions .email {
-        height: 10rem;
+      select option {
+        background-color: #444;
+        text-align: center;
       }
+    }
 
-      /* footer section */
-      footer ul {
-        padding: 10px;
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      footer .phone {
-        width: 100%;
-        padding: 0;
-      }
-
-      footer .lang-container {
-        padding-left: 0;
-      }
+    p {
+      color: #ffffffb3;
+      font-size: 0.87rem;
     }
   }
 }
