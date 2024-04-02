@@ -456,7 +456,6 @@ body footer {
   /* questions input */
   .email {
     width: 90%;
-    height: 7rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -496,9 +495,9 @@ body footer {
 
       button {
         width: 100%;
-        max-width: 13rem;
         height: 100%;
-        max-height: 3.5rem;
+        max-width: 13rem;
+        min-height: 3.5rem;
         background-color: #e50914;
         font-size: 1.5rem;
         font-weight: 500;
