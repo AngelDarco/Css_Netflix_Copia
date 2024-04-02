@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 @media (width <= 1280px) {
   body {
     .enjoy,
@@ -25,6 +26,25 @@
       .questions,
       footer {
         flex-direction: column;
+        min-height: 40rem;
+        max-width: 42rem;
+
+        .text {
+          width: 100%;
+          text-align: center;
+
+          h1 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1.1rem !important;
+          }
+        }
+
+        .animation {
+          width: 100%;
+        }
       }
 
       .portada {
@@ -36,8 +56,6 @@
         }
 
         .cuerpo {
-          max-width: calc(100% - 4rem);
-
           .titulo {
             font-size: 2rem;
             font-weight: 700;
@@ -56,20 +74,14 @@
       }
 
       .enjoy {
-        min-height: 40rem;
-
         .text {
-          width: 100%;
-
           h1,
           h2 {
-            text-align: center;
             padding: 0 1rem;
           }
         }
 
         .animation {
-          width: 100%;
           flex: 1;
           padding: 0 2rem;
         }
@@ -77,17 +89,8 @@
 
       .download {
         flex-direction: column-reverse;
-        max-width: 40rem;
-
-        .text,
-        .animation {
-          width: 100%;
-        }
 
         .text {
-          flex-direction: column;
-          text-align: center;
-
           p {
             font-size: 1.1rem;
           }

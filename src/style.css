@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 @import url("./queries.css");
 
 @font-face {
@@ -225,36 +226,35 @@ footer {
   color: #fff;
   width: 100%;
   display: flex;
-  flex-flow: wrap;
+  flex-flow: row;
   align-items: center;
   justify-content: space-around;
   padding: 4.5rem 0;
   max-width: calc(85% - 6rem);
-}
 
-/* Section Enjoy on your Tv */
-
-/* title and subtitle */
-.enjoy {
   .text {
     width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
 
     h1 {
       font-size: 3.1rem;
-      font-weight: bold;
+      font-weight: 900;
       line-height: 1.1;
       margin-bottom: 0.5rem;
     }
 
-    h2 {
+    p {
       font-size: 1.5rem;
       font-weight: 400;
     }
   }
 
+  .animation {
+    width: 50%;
+  }
+}
+
+/* Section Enjoy on your Tv */
+.enjoy {
   /* tv animation */
   .animation {
     width: 50%;
@@ -282,26 +282,6 @@ footer {
 
 /* Download Section */
 .download {
-  .animation,
-  .text {
-    width: 50%;
-    height: 100%;
-  }
-
-  .text {
-    h1 {
-      font-size: 3.1rem;
-      line-height: 1.1;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      font-size: 1.6rem;
-      font-weight: 400;
-      margin-top: 1rem;
-    }
-  }
-
   .animation {
     position: relative;
 
@@ -362,61 +342,26 @@ footer {
 /* Section Watch */
 .watch {
   border-top: 0;
-  height: 80vh;
 
-  .text,
   .animation {
-    width: 50%;
-    height: 80%;
-  }
-
-  .text {
-    padding: 0 30px;
-    text-align: center;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .text h1 {
-    font-size: 3.1rem;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
-  }
-
-  .text h2 {
-    font-size: 1.6rem;
-    font-weight: 400;
-  }
-
-  .animation .img {
-    width: 80%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     position: relative;
-  }
 
-  .animation .img img {
-    width: 100%;
-    height: 100%;
-  }
+    img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 100;
+    }
 
-  .animation .img .video {
-    position: absolute;
-    width: 60%;
-    height: 55%;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -100;
-  }
-
-  .animation .img .video video {
-    width: 100%;
-    height: 100%;
+    video {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      width: 65%;
+      height: 50%;
+    }
   }
 }
 
@@ -695,41 +640,6 @@ footer {
 }
 
 @media (width <= 950px) {
-  /* section divs */
-  .animation,
-  .text,
-  .questions div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-  }
-
-  /* section divs text h2 */
-  .enjoy .text h1,
-  .download .text h1,
-  .watch .text h1,
-  .kids .text h1,
-  .questions div {
-    font-size: 2.5rem;
-  }
-
-  /* section divs text h2 */
-  .enjoy .text h2,
-  .download .text h2,
-  .watch .text h2,
-  .kids .text h2,
-  .questions div {
-    font-size: 1.25rem;
-  }
-
-  /* watch section */
-  .watch .animation {
-    display: flex;
-    justify-content: center;
-  }
-
   /* kids section */
   .kids .text {
     justify-content: flex-start;
@@ -821,37 +731,6 @@ footer {
     }
 
     @media (width <= 500px) {
-      /* section divs text h1 */
-      .enjoy .text h1,
-      .download .text h1,
-      .watch .text h1,
-      .kids .text h1,
-      .questions .container h1 {
-        font-size: 1.625rem;
-      }
-
-      /* section divs text h2 */
-      .enjoy .text h2,
-      .download .text h2,
-      .watch .text h2,
-      .kids .text h2,
-      .questions .container h3 {
-        font-size: 1.125rem;
-      }
-
-      /* watch section */
-      .watch {
-        justify-content: center;
-      }
-
-      .watch .text {
-        height: 30%;
-      }
-
-      .watch .animation {
-        height: 50%;
-      }
-
       /* Question section */
       .questions .container ul {
         width: 100%;
